@@ -3,9 +3,11 @@ import { PORT, MONGODB_URI } from "./config.js";
 import mongoose from "mongoose";
 import { Book } from './models/bookModel.js'
 import booksRoute from './routes/booksRoute.js'
+import cors from 'cors';
 
 const app = express();
 
+// middleware to parse request body
 app.use(express.json());
 
 app.get('/', (request, response) => {
@@ -15,6 +17,15 @@ app.get('/', (request, response) => {
 
 app.use('/books', booksRoute);
 
+// handle the cors policy for our react frontned
+// option 1: allow all origins with default of cors(*)
+// app.use(cors())
+// option 2: allow custom origins (origin, methods, headers)
+app.use(cors({
+  origin: 'http://localhost:3000',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type'],
+}));
 
 mongoose
   .connect(MONGODB_URI)
