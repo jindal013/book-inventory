@@ -49,13 +49,14 @@ router.get('/', async (req, res) => {
 // get single book by id
 router.get("/:id", async (req, res) => {
   try {
-    const { id } = request.params;
+    const { id } = req.params;
 
     const book = await Book.findById(id).exec();
 
     return res.status(200).json(book);
 
   } catch (error) {
+    console.log('error coming from book routes!')
     console.log(error);
     return res.status(500).send({message: error.message});
   }
