@@ -1,11 +1,12 @@
 # MERN Book App
 
-This project is a full-stack application that uses Vite and React in the frontend and Express/MongoDB in the backend. I hope you can find this helpful as a beginner repo to implement and customize on your own!
+This project is a full-stack application that uses Vite and React in the frontend and Express/MongoDB in the backend. React router v7 and Tailwind v4 are used. I hope you can find this helpful as a beginner repo to implement and customize on your own!
 
 ## Prerequisites
 
 - Node.js (v14 or later)
 - npm
+- MongoDB cluster access
 
 ## Project Structure
 
@@ -55,7 +56,7 @@ Create a `config.js` file inside the `backend/` folder if it does not already ex
 
 Example configuration (replace `<YOUR_MONGODB_URI>` with your MongoDB connection string and optionally change the PORT):
 
-````js
+```js
 //// filepath: [config.js](http://_vscodecontentref_/1)
 export const MONGODB_URI = '<YOUR_MONGODB_URI>';
 export const PORT = process.env.PORT || 5555;
