@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const BookInfo = ({title, info}) => {
   return (
     <div className="my-4">

@@ -28,7 +28,9 @@ const BookModal = ({ book, onClose }) => {
           <BiUserCircle className="text-red-300 text-2xl" />
           <h2 className="my-1">{book.author}</h2>
         </div>
-        <p className="mt-4">Anything you want to show</p>
+        <p className="mt-4">
+          Hey there! <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank" className="text-blue-500 hover:underline hover:cursor-pointer">Click me! </a>
+        </p>
         <p className="my-2">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis,
           aliquam nihil dolore aut cumque exercitationem dolor labore hic ea
